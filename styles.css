@@ -146,7 +146,7 @@ button {
 .dynamic-txts li {
     list-style: none;
     color: #7209b7;
-    font-size: 15px;
+    font-size: 10px;
     font-weight: 900;
     font-family: Poppins;
     position: relative;
@@ -167,7 +167,7 @@ button {
 }
 
 .dynamic-txts li span::after {
-    content: " ";
+    content: "";
     position: absolute;
     left: 0;
     bottom: 0;
