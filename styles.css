@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Rubik+Glitch&family=Silkscreen:wght@700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: conic-gradient(from 90deg at 50% 0%, #111, 50%, #222, #111);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2px;
+    position: relative;
+}
+
+.newContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2px;
+    position: relative;
+}
+
+.quote {
+    font-family: Rubik Glitch;
+    font-size: 40px;
+    color: #e5e5e5;
+    transition: 2s;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+}
+
+.quote .newYear {
+    opacity: 0;
+    position: absolute;
+    color: #f72585;
+    z-index: 9;
+}
+
+/* .year{
+    position: absolute;
+} */
+.year span {
+    display: inline-block;
+    font-family: Silkscreen;
+    font-size: 150px;
+    font-weight: 900;
+    color: #fca311;
+    padding: 0;
+    transition: 2s;
+}
+
+.year span:last-child {
+    color: #e26d5c;
+}
+
+.year span:nth-child(3)::after {
+    content: "4";
+    color: greenyellow;
+    position: absolute;
+    transform: translateY(200px) rotate(-45deg);
+    opacity: 0;
+    filter: blur(50px);
+}
+
+.newContainer .year span:last-child {
+    transform: translateY(-200px) rotate(45deg);
+    opacity: 0;
+    filter: blur(50px);
+}
+
+.newContainer .year span:nth-child(3)::after {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0px) rotate(0deg);
+    transition: 2s;
+}
+
+.newContainer .quote .newYear {
+    opacity: 1;
+}
+
+.newContainer .quote .goodBye {
+    opacity: 0;
+}
+
+.typewriter {
+    white-space: nowrap;
+    /* Keep the text in one line */
+    overflow: hidden;
+    /* Hide overflow content */
+    margin: 0;
+}
+
+
+
+
+button {
+    background-color: #f72585;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 30px;
+    color: #e5e5e5;
+    font-family: Silkscreen;
+    display: block;
+}
+
+
+
+/* .container:hover button {
+    display: none;
+} */
+
+.newContainer .typewriter h1 {
+    display: inline-block;
+}
+
+@media screen and (max-width: 425px) {
+    .year span {
+        font-size: 90px;
+    }
+
+    .quote {
+        font-size: 30px;
+    }
+}
+
+.wrapper {
+    display: none;
+}
+
+.wrapper .dynamic-txts {
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+}
+
+.dynamic-txts li {
+    list-style: none;
+    color: #7209b7;
+    font-size: 15px;
+    font-weight: 900;
+    font-family: Poppins;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -200px;
+    }
+}
+
+.dynamic-txts li span {
+    position: relative;
+    margin: 5px 0;
+    line-height: 20px;
+}
+
+.dynamic-txts li span::after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border-left: 5px solid #FC6D6D;
+    animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing {
+    40%, 60% {
+        left: calc(100% + 10px);
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+.newContainer .wrapper{
+    display: flex;
+}
